@@ -21,5 +21,8 @@
   "homepage": "https://github.com/LazyFolks/handlebars-email#readme",
   "dependencies": {
     "handlebars": "^4.7.7"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1"
   }
 }
