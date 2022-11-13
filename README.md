@@ -9,7 +9,7 @@ Checkout the official Handlebars docs site at [handlebarsjs.com](https://handleb
 
 ## Installation
 
-Use the [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) package manager  to install Handlebars Email.
+Use the [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) package manager  to install [Handlebars Email](https://www.npmjs.com/package/handlebars-email).
 
 ```bash
 npm i handlebars-email
@@ -77,7 +77,7 @@ const context = { message: "Hello World!" }
 const eMailtemplate = hbsEmail( template, context )
 
 
-let transporter = nodemailer.createTransport({
+const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: process.env.SMTP_PORT || 587,
     secure: process.env.SMTP_PORT === 465, // true for 465, false for other ports
@@ -94,7 +94,7 @@ const mailOptions = {
     html: eMailtemplate, // Handlebars eMail template
 }
 
-transport.sendMail(mailOptions, (error, email) => {
+transporter.sendMail(mailOptions, (error, email) => {
   if (error) return console.log(error)
   console.log('Message sent: %s', email.messageId)
 });
