@@ -1,0 +1,25 @@
+{
+  "name": "handlebars-email",
+  "version": "1.0.0",
+  "description": "Handlebars Email Template",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LazyFolks/handlebars-email.git"
+  },
+  "keywords": [
+    "hbs"
+  ],
+  "author": "Karthik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LazyFolks/handlebars-email/issues"
+  },
+  "homepage": "https://github.com/LazyFolks/handlebars-email#readme",
+  "dependencies": {
+    "handlebars": "^4.7.7"
+  }
+}
