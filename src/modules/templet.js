@@ -1,7 +1,7 @@
 const fs = require('fs')
 
-const Reader = ( template, options = 'utf8' ) => fs.readFileSync(template, options)
-const Writer = ( template, data, options ) => fs.writeFileSync( template, data, options )
+const reader = ( template, options = 'utf8' ) => fs.readFileSync(template, options)
+const writer = ( template, data, options ) => fs.writeFileSync( template, data, options )
 const exists = template => fs.existsSync(template)
 
 const canRead = template => {
@@ -31,8 +31,8 @@ const canExecute = template => {
 
 
 module.exports = {
-    Reader:Reader,
-    Writer:Writer,
+    reader:reader,
+    writer:writer,
     exists:exists,
     canRead:canRead,
     canWrite:canWrite,
