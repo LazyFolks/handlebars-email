@@ -29,7 +29,7 @@ Import Handlebars Email `hbsEmail` method.
 ```js
 hbsEmailConfig({
   views: "views/email/",
-  extname: ".hbs"
+  extname: ".hbs",
 });
 ```
 
@@ -96,18 +96,21 @@ Would render:
 
 ---
 
-## With Nodemailer
+## Nodemailer
 
 email.js
 
 ```js
-const { hbsEmail } = require("handlebars-email");
+const { hbsEmail, hbsEmailConfig } = require("handlebars-email");
 const nodemailer = require("nodemailer");
-const path = require("path");
 
-const template = path.join(__dirname, "/template.hbs");
+hbsEmailConfig({
+  views: "views/email/",
+  extname: ".hbs",
+});
+
 const context = { message: "Hello World!" };
-const eMailTemplate = hbsEmail(template, context);
+const eMailTemplate = hbsEmail("template", context);
 
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
@@ -122,7 +125,7 @@ const transporter = nodemailer.createTransport({
 const mailOptions = {
   from: "sender@example.com", // Sender address
   to: "receiver@example.com", // List of recipients
-  subject: "Node Mailer Handlebars Email", // Subject line
+  subject: "Handlebars Email", // Subject line
   html: eMailTemplate, // Handlebars eMail template
 };
 
