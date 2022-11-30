@@ -24,6 +24,8 @@ Import Handlebars Email `hbsEmail` method.
 
 Once you have a template, use the `hbsEmail` method to render the template by passing the template  & context.  
 
+## Example
+
 email.js
 ```javascript
 const { hbsEmail } = require('handlebars-email')
