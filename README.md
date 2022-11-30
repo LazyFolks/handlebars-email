@@ -33,7 +33,7 @@ const path = require("path")
 
 const template = path.join(__dirname, '/template.hbs')
 const context = { message: "Hello World!" }
-const eMailtemplate = hbsEmail( template, context )
+const eMailTemplate = hbsEmail( template, context )
 ```
 template.hbs
 ```hbs
@@ -76,7 +76,7 @@ const path = require("path")
 
 const template = path.join(__dirname, '/template.hbs')
 const context = { message: "Hello World!" }
-const eMailtemplate = hbsEmail( template, context )
+const eMailTemplate = hbsEmail( template, context )
 
 
 const transporter = nodemailer.createTransport({
@@ -93,7 +93,7 @@ const mailOptions = {
     from: 'sender@example.com', // Sender address
     to: 'receiver@example.com', // List of recipients
     subject: 'Node Mailer Handlebars Email', // Subject line
-    html: eMailtemplate, // Handlebars eMail template
+    html: eMailTemplate, // Handlebars eMail template
 }
 
 transporter.sendMail(mailOptions, (error, email) => {
