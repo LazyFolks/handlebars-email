@@ -71,7 +71,7 @@ template.hbs
   </head>
   <body>
     <div>
-      <h2>Message: </h2>
+      <h2>Message:</h2>
       <p>{{message}}</p>
     </div>
   </body>
