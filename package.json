@@ -12,9 +12,9 @@
     "url": "git+https://github.com/LazyFolks/handlebars-email.git"
   },
   "keywords": [
-    "hbs",
     "handlebars",
     "handlebars-email",
+    "hbs",
     "hbs-email"
   ],
   "author": "Karthik",
