@@ -4,7 +4,7 @@
   "description": "A Handlebars template engine for emails.",
   "main": "src/main.js",
   "scripts": {
-    "pretest": "rm ./src/config/config.json",
+    "pretest": "rm -f src/config/config.json",
     "test": "jest"
   },
   "repository": {
